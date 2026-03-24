@@ -1,0 +1,69 @@
+% !TEX program  = xelatex
+% !TEX bibprogram = biber
+% !TEX encoding = UTF-8 Unicode
+% ==============================
+% main-bachelorr.tex —— 论文模版(本科)
+% ==============================
+
+\documentclass[bachelor]{nkuthesis}
+
+% 指定参考文献数据库文件
+\addbibresource{main.bib} 
+
+% ==============================
+% 基础信息设置
+% ==============================
+\nkusetup{
+  % 本科封面信息
+  论文题目(中文)          = {如何利用{\LaTeX}写一篇南开大学学位论文},
+  论文题目(英文)          = {How to Write a Nankai University Thesis Using $LaTeX$}, 
+  论文作者               = {张三},
+  年级                  = {2023级},
+  学号                  = {20260001},
+  专业                  = {计算机科学与技术},
+  系别                  = {计算机系},
+  学院                  = {计算机学院},
+  指导教师               = {李四\quad 教授},
+  指导教师(副)           = {王五\quad 教授},           % 没有就不写
+  完成日期               = {2026年3月},
+  信息左对齐             = {否},          % 选择 是 则封面信息左对齐
+  % 双修信息
+  双修院系               = {艺术学院},
+  双修专业               = {图像影像处理},
+}
+
+% ==============================
+% 正文内容
+% ==============================
+\setcounter{tocdepth}{1}                      % 目录显示的深度（2表示显示到1.1.1）
+
+
+\begin{document}
+\makebachelortitlepage                        % 本科标题封面
+% \makebachelordoubledegreetitlepage            % 本科双学位标题封面
+\bachelordeclarationpage                      % 本科声明页面
+
+% -----------前置部分-------------
+\frontmatter
+\include{data/abstract}
+\tableofcontents                              % 目录页
+% \listoffigures                                % 插图清单（可选）
+% \listoftables                                 % 表格清单（可选）
+
+% -----------主体部分-------------
+\mainmatter
+\include{data/introduction}
+\include{data/relatedwork}
+\include{data/methods}
+\include{data/experiments}
+\include{data/conclusion}
+
+
+
+\appendix                                     % 附录（可选）
+\input{data/appendix}                         % 附录（可选）
+\bibliographypage                             % 参考文献
+
+% -----------结尾部分-------------
+\include{data/acknowledgements}
+\end{document}

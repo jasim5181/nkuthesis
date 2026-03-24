@@ -1,0 +1,93 @@
+% !TEX program  = xelatex
+% !TEX bibprogram = biber
+% !TEX encoding = UTF-8 Unicode
+% ==============================
+% main.tex —— 论文模版(硕博)
+% ==============================
+
+% arabicnumber： 1. / 1.1
+% chinesenumber：第一章 / 第一节
+\documentclass[master, arabicnumber]{nkuthesis}
+
+% 指定参考文献数据库文件
+\addbibresource{main.bib} 
+
+% ==============================
+% 基础信息设置
+% ==============================
+\nkusetup{
+  % 封面页信息
+  中图分类号             = {},
+  学校代码               = {10055},
+  密级                  = {公开},
+  题名页/论文类别         = {硕士},      % 可选项：硕士 / 博士 / 硕士专业 / 博士专业
+  论文题目(中文)          = {如何利用{\LaTeX}写一篇南开大学学位论文},
+  论文题目(英文)          = {How to Write a Nankai University Thesis Using {\LaTeX}},
+  论文作者               = {张三},
+  指导教师               = {李四\quad 教授},    % 指导老师和职称之间用\quad分隔
+  申请学位               = {工学硕士},
+  培养单位               = {计算机学院},
+  学科专业               = {计算机科学与技术},
+  研究方向               = {计算机视觉},
+  答辩委员会主席          = {邓教授},
+  评阅人                 = {赵教授, 程教授},
+  论文完成时间            = {二〇二六年三月},
+  % 原创性声明信息
+  申请密级               = {公开},      % 可选项：公开 / 限制 / 秘密 / 机密 非公开需要写下面几项
+  保密开始时间            = {},
+  保密结束时间            = {},
+  审批表编号              = {},
+  批准日期               = {},
+  % 学位论文作者信息
+  学号                  = {20260001},
+  答辩日期               = {2026年3月25日},
+  作者信息/论文类别       = {学历硕士},        % 可选项：博士 / 学历硕士 / 专业学位硕士 / 同等学力硕士
+  联系电话               = {13010101010},
+  电子邮箱               = {zhangsan@mail.nankai.edu.cn},
+  通信地址(邮编)          = = {天津市津南区海河教育园区同砚路38号, 300350},  % 天津市南开区卫津路94号, 300071
+  非公开论文编号          = {},
+  备注                  = {},
+  % 匿名评审页信息
+  一级学科               = {请输入一级学科},
+  二级学科               = {请输入二级学科},
+  论文编号               = {},
+}
+
+% ==============================
+% 正文内容
+% ==============================
+% \usepackage{titlesec}
+\begin{document}
+
+% \fontinfo
+\maketitlepage                                % 硕博标题封面
+% \anonymoustitlepage                           % 匿名评审页面
+\declarationpage                              % 硕博声明页面
+\authorizationpage                            % 作者信息页面
+
+% -----------前置部分-------------
+\frontmatter
+\include{data/abstract}
+\tableofcontents                              % 目录页
+\listoffigures                                % 插图清单（可选）
+\listoftables                                 % 表格清单（可选）
+
+% -----------主体部分-------------
+\mainmatter
+\include{data/introduction}
+\include{data/relatedwork}
+\include{data/methods}
+\include{data/experiments}
+\include{data/conclusion}
+
+
+\bibliographypage                             % 参考文献
+
+\appendix                                     % 附录（可选）
+\input{data/appendix}                         % 附录（可选）
+% -----------结尾部分-------------
+\backmatter
+\include{data/acknowledgements}
+\include{data/resume}
+
+\end{document}

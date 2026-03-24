@@ -1,0 +1,93 @@
+
+\chapter{相关说明}
+
+\section{字体兼容问题}
+
+\subsection{Windows 本地编译}
+
+无需任何配置，开箱即用。
+
+\subsection{非Windows平台}
+
+系统字体与 Windows 存在差异，可能影响排版细节。即使不配置字体，模板也能正常编译通过，仅在笔画细节上与标准 Windows 环境略有差异。
+
+\subsubsection{推荐解决方案}
+
+\begin{enumerate}
+    \item 使用 TeXPage（推荐）：平台内置了标准的 Windows 字体库，无需手动配置。
+    \item 手动配置字体：将宋体、黑体、仿宋、楷体等字体文件从 Windows 系统拷贝至项目根目录的 fonts/ 文件夹。
+\end{enumerate}
+
+\begin{table}[htbp]
+    \centering
+    \caption{各平台中文字体对照表}
+    \label{tab:fonts}
+    \begin{tabular}{llll}
+        \toprule
+        类别 & Windows (中易出品) & Mac (华文出品) & Linux (开源/Fandol) \\
+        \midrule
+        宋体 & SimSun (simsun.ttc) & STSong & FandolSong \\
+        黑体 & SimHei (simhei.ttf) & STHeiti & FandolHei \\
+        楷体 & SimKai (simkai.ttf) & STKaiti & FandolKai \\
+        仿宋 & SimFang (simfang.ttf) & STFangsong & FandolFang \\
+        版权 & 商业版权 & 商业版权 & 免费开源 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{项目文件结构}
+
+项目主要包含以下文件和目录：
+
+\begin{itemize}
+    \item \texttt{nkuthesis.cls}：模板核心文件
+    \item \texttt{main.tex}：硕博主文档（修改个人信息和内容）
+    \item \texttt{main.bib}：参考文献数据库
+    \item \texttt{main-bachelor.tex}：本科主文档
+    \item \texttt{data/}：章节内容文件夹
+    \item \texttt{assets/}：资源文件目录
+    \item \texttt{figures/}：图片文件夹
+    \item \texttt{fonts/}：字体文件目录（可选）
+\end{itemize}
+
+\section{快速开始}
+
+\subsection{编译器选择}
+
+本模板必须使用 XeLaTeX 引擎编译，参考文献需配合 biber 处理。
+
+\subsubsection{推荐在线平台}
+
+\begin{itemize}
+    \item TeXPage：国内访问更稳定，原生支持中文模板
+    \item Overleaf：选择 XeLaTeX 作为编译器
+\end{itemize}
+
+\subsubsection{本地编译环境}
+
+\begin{itemize}
+    \item Windows：安装 TeX Live 或 MiKTeX
+    \item Mac：安装 MacTeX
+    \item 推荐编辑器：VS Code + LaTeX Workshop 插件
+\end{itemize}
+
+\subsection{编译方式}
+
+推荐编译顺序：xelatex main.tex → biber main → xelatex main.tex → xelatex main.tex
+
+\subsection{学位类型配置}
+
+\begin{itemize}
+    \item 本科使用 main-bachelor.tex
+    \item 硕博在 main.tex 中指定：\texttt{\textbackslash documentclass[master, arabicnumber]\{nkuthesis\}}
+    \item 可选学位：master（硕士）、doctor（博士）
+    \item 章节编号：arabicnumber（1.1样式）或 chinesenumber（第一章样式）
+\end{itemize}
+
+\subsection{个人信息填写}
+
+所有个人信息通过 \texttt{\textbackslash nkusetup\{\}} 统一设置，主要包括论文题目、作者信息、指导教师、学科专业等。
+
+\section{本章小结}
+
+本章介绍了南开大学 \LaTeX 模板的使用环境、文件结构和基本配置方法。通过合理配置，用户可以快速开始学位论文的撰写工作。

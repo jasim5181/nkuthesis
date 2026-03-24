@@ -1,0 +1,42 @@
+
+\chapter{常见问题与高级用法}
+
+\section{常见编译问题}
+
+\subsection{字体警告}
+
+在使用非Windows系统编译时，可能会出现字体相关的警告信息。这是正常现象，不影响文档生成。如需消除警告，可参考第二章的字体配置方法。
+
+\subsection{参考文献不显示}
+
+如果参考文献无法正常显示，请检查：
+
+\begin{enumerate}
+    \item 是否运行了 \texttt{biber main} 命令
+    \item \texttt{main.bib} 文件是否存在且格式正确
+    \item 引用命令是否使用了正确的语法，如 \texttt{\textbackslash cite\{key\}}
+\end{enumerate}
+
+\subsection{图片无法显示}
+
+图片显示问题通常是路径错误导致。请确保：
+
+\begin{itemize}
+    \item 图片文件存在于正确的路径
+    \item 文件扩展名正确（推荐使用PDF格式）
+    \item 路径分隔符使用正斜杠 \texttt{/}
+\end{itemize}
+
+\section{模板定制}
+
+\subsection{添加新章节}
+
+如需添加新章节，只需在 \texttt{data/} 目录下创建新的 \texttt{.tex} 文件，并在 \texttt{main.tex} 中添加 \texttt{\textbackslash include} 命令。
+
+\subsection{修改样式}
+
+模板样式可以通过修改 \texttt{nkuthesis.cls} 文件进行定制，但建议谨慎操作以避免破坏格式规范。
+
+\section{本章小结}
+
+通过掌握这些常见问题解决方案和高级用法，用户可以更加熟练地使用 \LaTeX 撰写南开大学学位论文。遇到问题时，建议优先查阅官方文档或寻求社区帮助。
