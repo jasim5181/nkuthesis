@@ -56,7 +56,7 @@
 
 
 
-**如果使用中发现模板存在格式错误等问题，请创建 [Issue](https://github.com/zhasion/nkuthesis/issues)说明问题，一起完善！**也建议善用搜索引擎或各种chatbot。
+**如果使用中发现模板存在格式错误等问题，请创建** [Issue](https://github.com/zhasion/nkuthesis/issues)**说明问题，一起完善！**也建议使用搜索引擎或各种Chatbot。
 
 > [!Warning]
 >
